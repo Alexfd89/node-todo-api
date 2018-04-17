@@ -112,7 +112,6 @@ app.post('/users', (req, res) => {
       res.send(req.user);
   });
 
-  //POST /users/login {email, password}
   app.post('/users/login', (req, res) => {
     var body = _.pick(req.body, ['email', 'password']);
 
