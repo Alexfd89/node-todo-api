@@ -4,16 +4,14 @@ $('#register-form').on('submit', function(e){
     var data = toJSONString(this);
     console.log(data);
 
-    //https://fierce-wave-97937.herokuapp.com
-    //http://localhost:3000
-    fetch('http://localhost:3000/users', {
-                headers : {'content-type': 'application/json'},
-                method: 'POST',
-                body: data
-            })
-            .then((res) => res.json())
-            .then((res) =>  console.log(res))
-            .catch((err)=>console.log(err))
+fetch('https://fierce-wave-97937.herokuapp.com/users', {
+            headers : {'content-type': 'application/json'},
+            method: 'POST',
+            body: data
+        })
+        .then((res) => res.json())
+        .then((res) =>  console.log(res))
+        .catch((err)=>console.log(err))
 });
 
 
